@@ -411,22 +411,14 @@
                 
                 <h2 id="a-note-about-gradients-in-classification-problems">A Note About Gradients in Classification Problems<a class="headerlink" href="#a-note-about-gradients-in-classification-problems" title="Permanent link">&para;</a></h2>
 <p>For the gradient boosting packages we <a href="https://github.com/Microsoft/LightGBM/blob/master/examples/python-guide/advanced_example.py">have to calculate the gradient of the Loss function with respect to the marginal probabilites</a>.</p>
-<p>In this case, we must calculate
-\begin{aligned}
-\frac{\partial L}{\partial z} = \frac{\partial L}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z}
-\end{aligned}</p>
-<p>The Hessian is similarly calculated:
-\begin{aligned}
-\frac{\partial^{2} L}{\partial z^{2}} = \frac{\partial}{\partial z}[\frac{\partial L}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z}]
-\end{aligned}</p>
-<p><strong>Where $\hat{y}$ is the sigmoid function, unless stated otherwise</strong>:</p>
-<p>\begin{aligned}
-\hat{y} = \sigma(z) = \frac{1}{1 + e^{-z}}
-\end{aligned}</p>
-<p>We will make use of the following property for the calculations of the Losses and Hessians:
-\begin{aligned}
-\frac{\partial \hat{y}}{\partial z} = \hat{y} \cdot (1 - \hat{y})
-\end{aligned}</p>
+<p>In this case, we must calculate</p>
+<p><img src="https://latex.codecogs.com/svg.latex?\frac{\partial&space;L}{\partial&space;z}&space;=&space;\frac{\partial&space;L}{\partial&space;\hat{y}}&space;\cdot&space;\frac{\partial&space;\hat{y}}{\partial&space;z}" title="\frac{\partial L}{\partial z} = \frac{\partial L}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z}" /></p>
+<p>The Hessian is similarly calculated:</p>
+<p><img src="https://latex.codecogs.com/svg.latex?\frac{\partial^{2}&space;L}{\partial&space;z^{2}}&space;=&space;\frac{\partial}{\partial&space;z}[\frac{\partial&space;L}{\partial&space;\hat{y}}&space;\cdot&space;\frac{\partial&space;\hat{y}}{\partial&space;z}]" title="\frac{\partial^{2} L}{\partial z^{2}} = \frac{\partial}{\partial z}[\frac{\partial L}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z}]" /></p>
+<p><strong>Where y-hat is the sigmoid function, unless stated otherwise</strong>:</p>
+<p><img src="https://latex.codecogs.com/svg.latex?\hat{y}&space;=&space;\sigma(z)&space;=&space;\frac{1}{1&space;&plus;&space;e^{-z}}" title="\hat{y} = \sigma(z) = \frac{1}{1 + e^{-z}}" /></p>
+<p>We will make use of the following property for the calculations of the Losses and Hessians:</p>
+<p><img src="https://latex.codecogs.com/svg.latex?\frac{\partial&space;\hat{y}}{\partial&space;z}&space;=&space;\hat{y}&space;\cdot&space;(1&space;-&space;\hat{y})" title="\frac{\partial \hat{y}}{\partial z} = \hat{y} \cdot (1 - \hat{y})" /></p>
                 
               
               
