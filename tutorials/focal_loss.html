@@ -432,6 +432,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivations/sle.html" class="md-nav__link">
+        Squared Log Error
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -557,14 +569,14 @@
 
 <span class="n">train</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">valid</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="n">train</span><span class="p">)</span>
-<span class="n">params_wce</span> <span class="o">=</span> <span class="p">{</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
      <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
      <span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="mi">41114</span><span class="p">,</span>
      <span class="s1">&#39;n_jobs&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
      <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
    <span class="p">}</span>
 
-<span class="n">wce_clf</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="n">params_wce</span><span class="p">,</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
                 <span class="n">train_set</span><span class="o">=</span><span class="n">train</span><span class="p">,</span>
                 <span class="n">valid_sets</span><span class="o">=</span><span class="p">[</span><span class="n">train</span><span class="p">,</span> <span class="n">valid</span><span class="p">],</span>
                 <span class="n">valid_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">,</span><span class="s1">&#39;valid&#39;</span><span class="p">],</span>

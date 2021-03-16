@@ -13,14 +13,14 @@
         <meta name="author" content="Daniel Timbrell">
       
       
-        <link rel="canonical" href="https://orchardbirds.github.io/bokbokbok/tutorials/weighted_cross_entropy.html">
+        <link rel="canonical" href="https://orchardbirds.github.io/bokbokbok/derivations/sle.html">
       
       <link rel="icon" href="../img/bokbokbok.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
-        <title>Weighted Cross Entropy - bokbokbok doks</title>
+        <title>Squared Log Error - bokbokbok doks</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usage-in-lightgbm" class="md-skip">
+        <a href="#squared-log-error" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Weighted Cross Entropy
+              Squared Log Error
             
           </span>
         </div>
@@ -186,15 +186,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="weighted_cross_entropy.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../tutorials/weighted_cross_entropy.html" class="md-tabs__link">
         Tutorials
       </a>
     </li>
@@ -204,13 +202,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../derivations/note.html" class="md-tabs__link">
+      <a href="note.html" class="md-tabs__link md-tabs__link--active">
         Derivations
       </a>
     </li>
@@ -281,14 +281,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         Tutorials
@@ -304,52 +302,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Weighted Cross Entropy
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="weighted_cross_entropy.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tutorials/weighted_cross_entropy.html" class="md-nav__link">
         Weighted Cross Entropy
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage-in-lightgbm" class="md-nav__link">
-    Usage in LightGBM
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage-in-xgboost" class="md-nav__link">
-    Usage in XGBoost
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -359,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="focal_loss.html" class="md-nav__link">
+      <a href="../tutorials/focal_loss.html" class="md-nav__link">
         Focal Loss
       </a>
     </li>
@@ -378,12 +335,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Derivations
@@ -401,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../derivations/note.html" class="md-nav__link">
+      <a href="note.html" class="md-nav__link">
         General Remarks
       </a>
     </li>
@@ -413,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../derivations/wce.html" class="md-nav__link">
+      <a href="wce.html" class="md-nav__link">
         Weighted Cross Entropy
       </a>
     </li>
@@ -425,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../derivations/focal.html" class="md-nav__link">
+      <a href="focal.html" class="md-nav__link">
         Focal Loss
       </a>
     </li>
@@ -435,11 +394,45 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../derivations/sle.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Squared Log Error
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sle.html" class="md-nav__link md-nav__link--active">
         Squared Log Error
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#squared-log-error" class="md-nav__link">
+    Squared Log Error
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -473,15 +466,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage-in-lightgbm" class="md-nav__link">
-    Usage in LightGBM
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage-in-xgboost" class="md-nav__link">
-    Usage in XGBoost
+  <a href="#squared-log-error" class="md-nav__link">
+    Squared Log Error
   </a>
   
 </li>
@@ -498,128 +484,20 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/orchardbirds/bokbokbok/edit/master/docs/tutorials/weighted_cross_entropy.ipynb" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/orchardbirds/bokbokbok/edit/master/docs/derivations/sle.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Weighted Cross Entropy</h1>
+                  <h1>Squared Log Error</h1>
                 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script>
-(function() {
-  function addWidgetsRenderer() {
-    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
-    var scriptElement = document.createElement('script');
-    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
-    var widgetState;
-
-    // Fallback for older version:
-    try {
-      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
-
-      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
-        widgetRendererSrc = 'jupyter-js-widgets@*/dist/embed.js';
-      }
-    } catch(e) {}
-
-    scriptElement.src = widgetRendererSrc;
-    document.body.appendChild(scriptElement);
-  }
-
-  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
-}());
-</script>
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">bokbokbok.loss_functions.classification</span> <span class="kn">import</span> <span class="n">WeightedCrossEntropyLoss</span>
-<span class="kn">from</span> <span class="nn">bokbokbok.eval_metrics.classification</span> <span class="kn">import</span> <span class="n">WeightedCrossEntropyMetric</span>
-
-<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> 
-                           <span class="n">n_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> 
-                           <span class="n">random_state</span><span class="o">=</span><span class="mi">41114</span><span class="p">)</span>
-
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_valid</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_valid</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> 
-                                                      <span class="n">y</span><span class="p">,</span> 
-                                                      <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> 
-                                                      <span class="n">random_state</span><span class="o">=</span><span class="mi">41114</span><span class="p">)</span>
-
-<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.7</span>
-</code></pre></div>
-
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="usage-in-lightgbm">Usage in LightGBM<a class="headerlink" href="#usage-in-lightgbm" title="Permanent link">&para;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">lightgbm</span> <span class="k">as</span> <span class="nn">lgb</span>
-
-<span class="n">train</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">valid</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="n">train</span><span class="p">)</span>
-<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
-     <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-     <span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="mi">41114</span><span class="p">,</span>
-     <span class="s1">&#39;n_jobs&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-     <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
-   <span class="p">}</span>
-
-<span class="n">clf</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
-                <span class="n">train_set</span><span class="o">=</span><span class="n">train</span><span class="p">,</span>
-                <span class="n">valid_sets</span><span class="o">=</span><span class="p">[</span><span class="n">train</span><span class="p">,</span> <span class="n">valid</span><span class="p">],</span>
-                <span class="n">valid_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">,</span><span class="s1">&#39;valid&#39;</span><span class="p">],</span>
-                <span class="n">fobj</span><span class="o">=</span><span class="n">WeightedCrossEntropyLoss</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
-                <span class="n">feval</span><span class="o">=</span><span class="n">WeightedCrossEntropyMetric</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
-                <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="usage-in-xgboost">Usage in XGBoost<a class="headerlink" href="#usage-in-xgboost" title="Permanent link">&para;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">xgboost</span> <span class="k">as</span> <span class="nn">xgb</span>
-
-<span class="n">dtrain</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">DMatrix</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">dvalid</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">DMatrix</span><span class="p">(</span><span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">)</span>
-
-<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
-     <span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="mi">41114</span><span class="p">,</span>
-     <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
-    <span class="s1">&#39;disable_default_eval_metric&#39;</span><span class="p">:</span> <span class="mi">1</span>
-   <span class="p">}</span>
-
-<span class="n">bst</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">params</span><span class="p">,</span>
-          <span class="n">dtrain</span><span class="o">=</span><span class="n">dtrain</span><span class="p">,</span>
-          <span class="n">num_boost_round</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
-          <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-          <span class="n">verbose_eval</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-          <span class="n">obj</span><span class="o">=</span><span class="n">WeightedCrossEntropyLoss</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
-          <span class="n">maximize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-          <span class="n">feval</span><span class="o">=</span><span class="n">WeightedCrossEntropyMetric</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">XGBoost</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-          <span class="n">evals</span><span class="o">=</span><span class="p">[(</span><span class="n">dtrain</span><span class="p">,</span> <span class="s1">&#39;dtrain&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">dvalid</span><span class="p">,</span> <span class="s1">&#39;dvalid&#39;</span><span class="p">)])</span>
-</code></pre></div>
-
-</div>
-</div>
+                <h2 id="squared-log-error">Squared Log Error<a class="headerlink" href="#squared-log-error" title="Permanent link">&para;</a></h2>
+<p>The equations for Squared Log Error is:</p>
+<p><img src="https://latex.codecogs.com/svg.latex?L_{SLE}&space;=&space;\frac{1}{2}(\log(\hat{y}&space;&plus;&space;1)&space;-&space;\log(y&space;&plus;&space;1))^{2}" title="L_{SLE} = \frac{1}{2}(\log(\hat{y} + 1) - \log(y + 1))^{2}" /></p>
+<p>We calculate the Gradient:</p>
+<p><img src="https://latex.codecogs.com/svg.latex?G_{SLE}&space;=&space;\frac{\log(\hat{y}&space;&plus;&space;1)&space;-&space;\log(y&space;&plus;&space;1)}{\hat{y}&space;&plus;&space;1}" title="G_{SLE} = \frac{\log(\hat{y} + 1) - \log(y + 1)}{\hat{y} + 1}" /></p>
+<p>We also need to calculate the Hessian:</p>
+<p><img src="https://latex.codecogs.com/svg.latex?H_{SLE}&space;=&space;\frac{-&space;\log(\hat{y}&space;&plus;&space;1)&space;&plus;&space;\log(y&space;&plus;&space;1)&space;&plus;&space;1}{(\hat{y}&space;&plus;&space;1)^{2}}" title="H_{SLE} = \frac{- \log(\hat{y} + 1) + \log(y + 1) + 1}{(\hat{y} + 1)^{2}}" /></p>
                 
               
               
@@ -637,7 +515,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../index.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="focal.html" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -646,25 +524,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Home
-            </div>
-          </div>
-        </a>
-      
-      
-        <a href="focal_loss.html" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
               Focal Loss
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
