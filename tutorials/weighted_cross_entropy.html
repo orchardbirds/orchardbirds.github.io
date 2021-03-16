@@ -354,6 +354,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="focal_loss.html" class="md-nav__link">
+        Focal Loss
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -524,6 +536,8 @@
                                                       <span class="n">y</span><span class="p">,</span> 
                                                       <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> 
                                                       <span class="n">random_state</span><span class="o">=</span><span class="mi">41114</span><span class="p">)</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.7</span>
 </code></pre></div>
 
 </div>
@@ -553,8 +567,8 @@
                 <span class="n">train_set</span><span class="o">=</span><span class="n">train</span><span class="p">,</span>
                 <span class="n">valid_sets</span><span class="o">=</span><span class="p">[</span><span class="n">train</span><span class="p">,</span> <span class="n">valid</span><span class="p">],</span>
                 <span class="n">valid_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">,</span><span class="s1">&#39;valid&#39;</span><span class="p">],</span>
-                <span class="n">fobj</span><span class="o">=</span><span class="n">WeightedCrossEntropyLoss</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">),</span>
-                <span class="n">feval</span><span class="o">=</span><span class="n">WeightedCrossEntropyMetric</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">),</span>
+                <span class="n">fobj</span><span class="o">=</span><span class="n">WeightedCrossEntropyLoss</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
+                <span class="n">feval</span><span class="o">=</span><span class="n">WeightedCrossEntropyMetric</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
                 <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
 
@@ -586,18 +600,10 @@
           <span class="n">num_boost_round</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
           <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
           <span class="n">verbose_eval</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-          <span class="n">obj</span><span class="o">=</span><span class="n">WeightedCrossEntropyLoss</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">),</span>
+          <span class="n">obj</span><span class="o">=</span><span class="n">WeightedCrossEntropyLoss</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
           <span class="n">maximize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-          <span class="n">feval</span><span class="o">=</span><span class="n">WeightedCrossEntropyMetric</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">XGBoost</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+          <span class="n">feval</span><span class="o">=</span><span class="n">WeightedCrossEntropyMetric</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">XGBoost</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
           <span class="n">evals</span><span class="o">=</span><span class="p">[(</span><span class="n">dtrain</span><span class="p">,</span> <span class="s1">&#39;dtrain&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">dvalid</span><span class="p">,</span> <span class="s1">&#39;dvalid&#39;</span><span class="p">)])</span>
-</code></pre></div>
-
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 </div>
@@ -634,13 +640,13 @@
         </a>
       
       
-        <a href="../derivations/note.html" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="focal_loss.html" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              General Remarks
+              Focal Loss
             </div>
           </div>
           <div class="md-footer__button md-icon">
