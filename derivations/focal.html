@@ -186,6 +186,22 @@
         
   
   
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorials/weighted_cross_entropy.html" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
     
   
 
@@ -265,6 +281,48 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/weighted_cross_entropy.html" class="md-nav__link">
+        Weighted Cross Entropy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -272,14 +330,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
-      <label class="md-nav__link" for="__nav_2">
+      <label class="md-nav__link" for="__nav_3">
         Derivations
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Derivations" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Derivations
         </label>
@@ -410,7 +468,7 @@
                   <h1>Focal Loss</h1>
                 
                 <h2 id="weighted-focal-loss">Weighted Focal Loss<a class="headerlink" href="#weighted-focal-loss" title="Permanent link">&para;</a></h2>
-<p>Weighted Focal Loss applies a scaling parameter $\alpha$ and a focusing parameter $\gamma$ to <a href="https://en.wikipedia.org/wiki/Cross_entropy#Cross-entropy_loss_function_and_logistic_regression">Binary Cross Entropy</a></p>
+<p>Weighted Focal Loss applies a scaling parameter <em>alpha</em> and a focusing parameter <em>gamma</em> to <a href="https://en.wikipedia.org/wiki/Cross_entropy#Cross-entropy_loss_function_and_logistic_regression">Binary Cross Entropy</a></p>
 <p>We take the definition of the Focal Loss from <a href="https://arxiv.org/pdf/1708.02002.pdf">this paper</a>:</p>
 <p><img src="https://latex.codecogs.com/svg.latex?L_{FL}&space;=&space;-&space;\alpha(1&space;-&space;p_{t})^{&space;\gamma}&space;\log&space;p_{t}" title="L_{FL} = - \alpha(1 - p_{t})^{ \gamma} \log p_{t}" /></p>
 <p>where:</p>
